@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>ex3-04</title>
+    </head>
+<body>
+
+    <h2>JavaScript Flow Controls</h2>
+    <p id="happy_day"></p>
+    <p id="good_night"></p>
+    <p id="good_all"></p>
+
+    <script>
+      var hour = new Date().getHours(); // 0 to 23
+      var greeting;
+
+      // Fix: add an else so greeting is always defined
+      if (hour < 18) {
+        greeting = "have a good day!";
+      } else {
+        greeting = "Good evening!";
+      }
+      document.getElementById("happy_day").innerHTML = greeting;
+
+      if (hour < 16) {
+        greeting = "Good day to you!";
+      } else {
+        greeting = "Good night!";
+      }
+      document.getElementById("good_night").innerHTML = greeting;
+
+      if (hour < 12) {
+        greeting = "Good Morning!";
+      } else if (hour < 18) {
+        greeting = "Good Afternoon!";
+      } else {
+        greeting = "Good Night!";
+      }
+      document.getElementById("good_all").innerHTML = greeting;
+    </script>
+
+<p><a href="geo455_ex3.html">Back to Main Page</a></p>
+  
+</body>
+</html>
