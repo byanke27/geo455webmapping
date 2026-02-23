@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>geo455_Lab3</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- Your choice of Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="geo455_Lab3.css" />
+</head>
+
+<body bgcolor="#EDDD9E">
+
+    <h1 align="center">Lab 3</h1>
+
+    <div id="map"></div>
+
+    <h1 id="title">Lab 3: Golf courses around central wisconsin</h1>
+
+    <div id="description">
+        <h2>About this map</h2>
+        <p>
+            This is the final result of the 
+            <a href="https://leafletjs.com/examples/quick-start/" target="_blank" rel="noopener">
+                Leaflet Quick Start Guide
+            </a>.
+            The map shows a visual representation of central Wisconsin and the golf courses I have played in the
+            local area. 
+        </p>
+      
+      <h3>Golf Courses Included</h3>
+      <ul>
+      <li>Reedsburg Country Club</li>
+        <li>Baraboo Country Club</li>
+        <li>Spring Brook Golf Course</li>
+        <li>Rockin' 9 Golf Course</li>
+        <li>Trappers Turn Golf Course</li>
+        <li>Chula Vista Golf Course</li>
+        <li>West Brook Hills</li>
+        <li>Devil's Head Resort</li>
+        <li>Spring Green Golf Course</li>
+        <li>Lake Wisconsin Country Club</li>
+      </ul>
+        
+        <p>This is an image at Trappers Turn Golf Course</p>
+        
+        <img src="S:\yanke3364\GEO455\Lab_3\trappers turn picture.webp">
+    
+        <p>image source is an AI travel website</p>
+        
+    </div>
+
+    <footer>
+        <p>Map Credits: Bryant Yanke GEO455</p>
+    </footer>
+
+    <!-- Make sure you put the leaflet map library AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Your map code -->
+    <script src="Lab3_map.js"></script>
+
+</body>
+</html>
