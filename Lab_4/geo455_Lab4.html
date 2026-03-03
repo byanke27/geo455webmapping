@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>geo455_Lab4</title>
+   
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <!-- Make sure you put the leaflet map library AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    /* easy button link to js script and leaflet file */
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
+    /* easy button code */
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
+    <!-- Your choice of Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="geo455_Lab4.css" />
+</head>
+
+<body>
+
+  
+
+    <div id="map"></div>
+
+    <h1 id="title">Lab 4: The Seven Wonders of the World</h1>
+
+    <div id="description">
+        <h2>About this map</h2>
+        <p>In this assignment, we are working with layer controls. We have three layers, landmarks, basemap, and SRTM
+            30m hillshade map  using WMS service. Landmarks are basead on encyclopedia Britannica's entry on <a href="https://www.britannica.com/list/new-seven-wonders-of-the-world">New Seven Wonders of the World</a> 
+           and the images are linked from Wikipedia common images
+          
+        </p>
+      <p>map authored by: Bryant Yanke</p>
+       
+      <h3>Locations included:</h3>
+      <ul>
+      <li>Great Wall of China</li>
+        <li>Chrsit the Rdeemer Statue</li>
+        <li>Machu Picchu</li>
+        <li>Chichen Itza</li>
+        <li>Roman Colosseum</li>
+        <li>Taj Mahal</li>
+        <li>Petra</li>  
+      </ul>
+        
+        
+    </div>
+
+
+
+
+    <!-- Your map code -->
+    <script src="map_Lab4.js"></script>
+
+    <footer>
+        <p>Map Credits: Bryant Yanke GEO455</p>
+    </footer>
+</body>
+</html>
