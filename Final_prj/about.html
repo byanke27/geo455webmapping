@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>About the Map — CFB Spending & Wins</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body { background-color: #f8f9fa; }
+        .about-hero {
+            background-color: #1a3a2a;
+            color: white;
+            padding: 3rem 2rem;
+        }
+        .about-hero h1 { font-size: 2.5rem; font-weight: 700; }
+        .about-hero p  { color: rgba(255,255,255,0.75); font-size: 1.1rem; }
+        .section-card  {
+            background: white;
+            border-radius: 6px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+        }
+        .section-card h4 {
+            color: #1a3a2a;
+            font-weight: 700;
+            border-bottom: 2px solid #f0a500;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+        .section-card p, .section-card li {
+            color: #444;
+            line-height: 1.75;
+        }
+        .source-table th { background-color: #1a3a2a; color: white; }
+        .back-btn {
+            background-color: #1a3a2a;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        .back-btn:hover { background-color: #2d6a4f; color: white; }
+        footer { background-color: #1a3a2a; color: rgba(255,255,255,0.6); }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container-fluid">
+            <span class="navbar-brand fw-semibold">Final Project: Division 1 College Football Spending in Correlation to Win/Loss Record</span>
+            <span class="fw-semibold">GEO 455: Webmapping</span>
+            <a href="geo455_Final_prj.html" class="fw-semibold ms-3">← Back to Map</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="about-hero">
+        <div class="container">
+            <h1>About the Map</h1>
+            <p>Project background, data sources, and methodology.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container py-4">
+
+        <!-- Project Overview -->
+        <div class="section-card">
+            <h4>Project Overview</h4>
+            <p>
+                This interactive web map visualizes Division I FBS college football programs across the
+                United States, exploring whether increased financial investment in football programs
+                correlates with better on-field performance. Using data spanning the 2022, 2023, and
+                2024 seasons, users can explore stadium locations, compare program spending, and examine
+                win-loss records across all 128 FBS programs.
+            </p>
+            <p>
+                The financial landscape of college athletics has shifted dramatically in recent years,
+                particularly following the introduction of Name, Image, and Likeness (NIL) policies
+                allowing student-athletes to receive compensation. This map provides a spatial lens on
+                those trends, letting users identify regional patterns and outliers in the relationship
+                between spending and performance.
+            </p>
+        </div>
+
+        <!-- How to Use -->
+        <div class="section-card">
+            <h4>How to Use the Map</h4>
+            <ul>
+                <li><strong>Stadium Markers</strong> — Click any marker to see team name, stadium, city, conference, capacity, and year built.</li>
+                <li><strong>Proportional Circles</strong> — Circle size represents stadium capacity. Hover to highlight and see a quick popup.</li>
+                <li><strong>Heat Map</strong> — Heat intensity is weighted by stadium capacity, showing regional density of large programs.</li>
+                <li><strong>Cluster Markers</strong> — Zoomed out view groups nearby stadiums into clusters. Zoom in to expand them.</li>
+                <li><strong>Search Bar</strong> — Search by team name (e.g. "Michigan" or "Alabama") to zoom directly to that stadium.</li>
+                <li><strong>Basemap Toggle</strong> — Switch between Satellite, Streets, and Light basemaps using the layer control panel.</li>
+                <li><strong>Home Button</strong> — Returns the map to the default full US extent.</li>
+                <li><strong>Mini Map</strong> — The small map in the bottom left provides geographic context while you explore.</li>
+            </ul>
+        </div>
+
+        <!-- Data Sources -->
+        <div class="section-card">
+            <h4>Data Sources</h4>
+            <table class="table source-table table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th>Dataset</th>
+                        <th>Source</th>
+                        <th>Coverage</th>
+                        <th>Key Fields Used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NCAA Stadium Locations</td>
+                        <td><a href="https://www.kaggle.com/datasets/mexwell/ncaa-stadiums" target="_blank">Kaggle</a></td>
+                        <td>FBS programs, USA</td>
+                        <td>Stadium name, lat/lon, capacity, year built</td>
+                    </tr>
+                    <tr>
+                        <td>College Athletics Financial Data</td>
+                        <td><a href="https://knightnewhousedata.org/reports" target="_blank">Knight-Newhouse Database</a></td>
+                        <td>FBS programs, 2022–2024</td>
+                        <td>Total football program spending</td>
+                    </tr>
+                    <tr>
+                        <td>CFB Win-Loss Records</td>
+                        <td><a href="https://www.sports-reference.com/cfb/" target="_blank">Sports Reference</a></td>
+                        <td>FBS programs, 2022–2024</td>
+                        <td>Wins, losses, win percentage</td>
+                    </tr>
+                    <tr>
+                        <td>Basemap Tiles</td>
+                        <td>Esri, CartoDB, OpenStreetMap</td>
+                        <td>Global</td>
+                        <td>Background reference imagery</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Methodology -->
+        <div class="section-card">
+            <h4>Methodology</h4>
+            <p>
+                Stadium coordinates from Kaggle were used as the spatial foundation for the project.
+                Financial spending totals from the Knight-Newhouse College Athletics Database and
+                win-loss records from Sports Reference were cleaned and standardized using Python,
+                then joined to stadium locations using school name as the common key.
+            </p>
+            <p>
+                Out of 128 FBS stadiums, 107 were successfully matched with financial data and 115
+                with win-loss records. Schools without a match — typically due to naming differences
+                between datasets — display available fields and show "N/A" for missing values.
+                All data was compiled into a single JavaScript file for direct browser delivery
+                without requiring a web server.
+            </p>
+        </div>
+
+        <!-- Tools Used -->
+        <div class="section-card">
+            <h4>Tools &amp; Technologies</h4>
+            <ul>
+                <li><strong>Leaflet.js</strong> — Interactive map library</li>
+                <li><strong>Bootstrap 5</strong> — Page layout and styling</li>
+                <li><strong>Leaflet plugins</strong> — MarkerCluster, Leaflet Search, MiniMap, EasyButton, Leaflet Heat</li>
+                <li><strong>Python (pandas)</strong> — Data cleaning, standardization, and joining</li>
+                <li><strong>Phoenix Code</strong> — HTML/CSS/JS editing environment</li>
+                <li><strong>GitHub Pages</strong> — Web hosting</li>
+                <li><strong>Claude (Anthropic)</strong> — AI assistant used throughout the project for data processing, JavaScript development, and troubleshooting. All data, design decisions, and final code were reviewed and directed by the student.</li>
+            </ul>
+        </div>
+
+        <!-- Credits -->
+        <div class="section-card">
+            <h4>Credits</h4>
+            <p>
+                Created by <strong>Bryant Yanke</strong> for GEO 455: Web Mapping,
+                University of Wisconsin–La Crosse.
+            </p>
+            <p>
+                Basemap tiles © <a href="https://www.esri.com" target="_blank">Esri</a>,
+                © <a href="https://carto.com" target="_blank">CARTO</a>,
+                © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>.
+            </p>
+            <a href="geo455_Final_prj.html" class="back-btn">← Back to Map</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <small>GEO 455: Web Mapping · University of Wisconsin–La Crosse · Bryant Yanke</small>
+    </footer>
+
+</body>
+</html>
