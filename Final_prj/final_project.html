@@ -78,10 +78,11 @@
              <p><strong>Location of Stadiums:</strong> Stadium markers show where each stadium is located in the U.S.</p>
              <p><strong>Search and Navigation:</strong> Use Stadium name search, the mini map, scale bar, and full-extent button to explore efficiently.</p>
              <div id="top-peaks-buttons" class="d-grid gap-2 mb-3"></div>
-             <p><strong>Proportional Circles showing amount of money spent:</strong> Circle size represents the amount of money spent per team.</p>
+             <p><strong>Proportional Circles (Spending):</strong> Circle size represents total football program spending for the selected year. Teams with a gold ring finished the season ranked in the AP Top 25.</p>
              <!-- Proportional circle class legend will be injected by map_lab7.js -->
              <div id="prop-circle-legend" class="mt-2"></div>
-             <p><strong>Density Heat Map:</strong> Heat intensity is weighted by proximity to other winning teams "i might romove or edit this"</p>
+            <p><strong>Performance Layer (Win %):</strong> Circle size represents program spending, while fill color indicates win percentage for the selected year. Green = high win rate, red = low win rate.</p>
+             <p><strong>Density Heat Map:</strong> Heat intensity is weighted by distance to other stadiums, showing the high density of Divsion I athletics on the eastern half of the U.S."</p>
             
             <!-- info for legend and explination of layers -->
             <hr>
@@ -113,10 +114,6 @@
             <span class="small">No data available</span>
             </div>
 
-            <div class="d-flex align-items-center mb-3">
-            <div style="width:16px;height:16px;border-radius:50%;background:#a6d96a;border:3px solid #f0a500;margin-right:8px;flex-shrink:0;"></div>
-            <span class="small"><strong>Gold ring</strong> = AP Top 25 Ranked</span>
-            </div>
 
 <hr>
 <p class="small mb-1"><strong>⭕ Circle Size — Spending</strong></p>
@@ -131,6 +128,10 @@
 <div class="d-flex align-items-center mb-3">
   <div style="width:12px;height:12px;border-radius:50%;background:#920101;opacity:0.5;margin-right:8px;flex-shrink:0;"></div>
   <span class="small">Under $40M</span>
+</div>
+<div class="d-flex align-items-center mb-3">
+  <div style="width:16px;height:16px;border-radius:50%;background:#a6d96a;border:3px solid #f0a500;margin-right:8px;flex-shrink:0;"></div>
+  <span class="small"><strong>Gold ring</strong> = AP Top 25 Ranked</span>
 </div>
 
 <hr>
